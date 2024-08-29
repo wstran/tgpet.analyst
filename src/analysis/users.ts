@@ -78,7 +78,7 @@ import Database from "../libs/database";
 
         weekly_data_chart.categories.reverse();
 
-        for await (const user of userCollection.find().stream()) {
+        for await (const user of userCollection.find({ is_bot: { $exists: true } }).stream()) {
             const last_active_at = user.last_active_at.getTime();
             const user_created_at = user.created_at.getTime();
 
