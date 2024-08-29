@@ -119,8 +119,6 @@ import Database from "../libs/database";
                 };
             };
 
-            console.log(daily_data_chart.dates, daily_data_chart.series[0].data)
-
             // Daily New
             const user_current_date_string = `${user.created_at.getFullYear()}-${user.created_at.getMonth() + 1}-${user.created_at.getDate()}`;
 
